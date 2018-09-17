@@ -7,7 +7,8 @@ def getInfo(filename=None):
   if cpuInfo is not None and 'revision' in cpuInfo:
     code = int(cpuInfo['revision'], 16)
     revInfo = getRevInfo(code)
+    revInfo['code'] = cpuInfo['revision']
 
-    return { **cpuInfo, 'rev': revInfo }
+    return { **cpuInfo, 'revision': revInfo }
   else:
     raise ReferenceError('No revision code found')
