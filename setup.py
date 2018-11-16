@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pirev",
-    version="1.0.1",
+    version="1.1.0",
     author="Sam Jordan",
     author_email="sam@jrdn.ca",
     description="Raspberry Pi revision utility",
