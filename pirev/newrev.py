@@ -1,4 +1,4 @@
-from .type import A, A_PLUS, A_3_PLUS, ALPHA, B, B_PLUS, B_2, B_3, B_3_PLUS, CM_1, CM_3, ZERO, ZERO_W
+from .type import A, A_PLUS, A_3_PLUS, ALPHA, B, B_PLUS, B_2, B_3, B_3_PLUS, CM_1, CM_3, CM_3_PLUS, ZERO, ZERO_W
 from .memory import GB_1, MB_256, MB_512
 from .processor import BCM_2835, BCM_2836, BCM_2837
 from .manufacturer import EGOMAN, EMBEST, SONY_JAPAN, SONY_UK, STADIUM
@@ -64,6 +64,7 @@ TYPE_CODE = {
   0xc: ZERO_W,
   0xd: B_3_PLUS,
   0xe: A_3_PLUS,
+  0x10: CM_3_PLUS
 }
 
 def getType(code):
