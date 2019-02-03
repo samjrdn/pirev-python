@@ -78,6 +78,9 @@ def getRevision(code):
   return 1 + (code & 0b1111)/10
 
 def newrev(code):
+  if isinstance(code, str):
+    code = int(code, 16)
+
   flag = (code >> 23) & 0b1
 
   if flag != 1:

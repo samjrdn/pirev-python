@@ -5,8 +5,7 @@ def getInfo(filename=None):
   cpuInfo = getCpuInfo(filename)
 
   if cpuInfo is not None and 'revision' in cpuInfo:
-    code = int(cpuInfo['revision'], 16)
-    revInfo = getRevInfo(code)
+    revInfo = getRevInfo(cpuInfo['revision'])
     revInfo['code'] = cpuInfo['revision']
 
     return { **cpuInfo, 'revision': revInfo }

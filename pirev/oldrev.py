@@ -33,5 +33,8 @@ def revInfo(type, memory, processor, revision, manufacturer):
   }
 
 def oldrev(code):
+  if isinstance(code, str):
+    code = int(code, 16)
+
   if code in REV_MAP:
     return revInfo(*REV_MAP[code])
