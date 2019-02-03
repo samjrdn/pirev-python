@@ -75,7 +75,7 @@ def getType(code):
     return UNKNOWN
 
 def getRevision(code):
-  return code & 0b1111
+  return 1 + (code & 0b1111)/10
 
 def newrev(code):
   flag = (code >> 23) & 0b1
