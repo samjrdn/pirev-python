@@ -9,10 +9,7 @@ def testDataPath(filename):
 def readTsvData(filename):
   with open(filename) as tsvfile:
     reader = csv.DictReader(tsvfile, dialect='excel-tab')
-    data = []
-    for row in reader:
-      data.append(dict((k.lower(), v) for k,v in row.items()))
-    return data
+    return list(dict((k.lower(), v) for k,v in row.items()) for row in reader)
 
 CPUINFO_PI1 = testDataPath('cpuinfo_pi1')
 CPUINFO_PI3 = testDataPath('cpuinfo_pi3')
