@@ -1,6 +1,6 @@
-from .type import A, A_PLUS, A_3_PLUS, ALPHA, B, B_PLUS, B_2, B_3, B_3_PLUS, CM_1, CM_3, CM_3_PLUS, ZERO, ZERO_W
-from .memory import GB_1, MB_256, MB_512
-from .processor import BCM_2835, BCM_2836, BCM_2837
+from .type import A, A_PLUS, A_3_PLUS, ALPHA, B, B_PLUS, B_2, B_3, B_3_PLUS, B_4, CM_1, CM_3, CM_3_PLUS, ZERO, ZERO_W
+from .memory import GB_1, GB_2, GB_4, MB_256, MB_512
+from .processor import BCM_2711, BCM_2835, BCM_2836, BCM_2837
 from .manufacturer import EGOMAN, EMBEST, SONY_JAPAN, SONY_UK, STADIUM
 
 UNKNOWN = 'unknown'
@@ -9,6 +9,8 @@ MEMORY_CODE = {
   0x0: MB_256,
   0x1: MB_512,
   0x2: GB_1,
+  0x3: GB_2,
+  0x4: GB_4,
 }
 
 def getMemory(code):
@@ -40,6 +42,7 @@ PROCESSOR_CODE = {
   0x0: BCM_2835,
   0x1: BCM_2836,
   0x2: BCM_2837,
+  0x3: BCM_2711,
 }
 
 def getProcessor(code):
@@ -64,7 +67,8 @@ TYPE_CODE = {
   0xc: ZERO_W,
   0xd: B_3_PLUS,
   0xe: A_3_PLUS,
-  0x10: CM_3_PLUS
+  0x10: CM_3_PLUS,
+  0x11: B_4,
 }
 
 def getType(code):
