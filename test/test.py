@@ -25,7 +25,7 @@ class TestGetInfo(unittest.TestCase):
 
     self.assertEqual(info['revision'], {
       'type': 'B',
-      'memory': '512 MB',
+      'memory': '512MB',
       'processor': 'BCM2835',
       'revision': 2.0,
       'manufacturer': 'Sony UK',
@@ -37,7 +37,7 @@ class TestGetInfo(unittest.TestCase):
 
     self.assertEqual(info['revision'], {
       'type': '3B',
-      'memory': '1 GB',
+      'memory': '1GB',
       'processor': 'BCM2837',
       'revision': 1.2,
       'manufacturer': 'Embest',
